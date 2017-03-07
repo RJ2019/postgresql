@@ -59,8 +59,6 @@ rescue LoadError
     end.run_action(:install)
   end
 
-  include_recipe 'postgresql::client'
-
   package node['postgresql']['client']['packages'] do
     action :nothing
   end.run_action(:install)
